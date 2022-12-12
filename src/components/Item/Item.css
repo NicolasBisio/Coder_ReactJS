@@ -82,7 +82,7 @@ body {
 }
 
 .btn,
-.btnAgregar {
+.btnMas {
     background-color: #ffefef;
     color: #db8585;
     border: 1.5px solid #ffc3c3;
@@ -96,14 +96,14 @@ body {
 .btn.focus,
 .btn.focus:active,
 .btn:active:focus
-.btnAgregar:hover,
-.btnAgregar:focus,
-.btnAgregar:active,
-.btnAgregar.active.focus,
-.btnAgregar.active:focus,
-.btnAgregar.focus,
-.btnAgregar.focus:active,
-.btnAgregar:active:focus {
+.btnMas:hover,
+.btnMas:focus,
+.btnMas:active,
+.btnMas.active.focus,
+.btnMas.active:focus,
+.btnMas.focus,
+.btnMas.focus:active,
+.btnMas:active:focus {
     border: 1.5px solid #ffc3c3;
     background-color: #ffd4d4;
     color: #db8585;

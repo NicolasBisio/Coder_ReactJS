@@ -7,7 +7,7 @@ function NavBar() {
         <div className="header">
             <nav className="navbar navbar-expand-md navbar__color">
                 <div className="container-fluid">
-                    <a className="navbar-brand navbar__logo" href="./index.html"><img src={logo} alt="logoAnmai"></img></a>
+                    <Link className="navbar-brand navbar__logo" to="/"><img src={logo} alt="logoAnmai"></img></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">

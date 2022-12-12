@@ -8,7 +8,7 @@ function Item({product}) {
                 <div className="card-name">{product.nombre}</div>
                 <div className="card-price">$ {product.precio}</div>
                 <div className="boton card-button">
-                    <button className="btnAgregar" id={product.nombre} title="Pulsa para agregar al carrito">Agregar</button>
+                    <button className="btnAgregar" id={product.nombre} title="Pulsa para agregar al carrito">Ver más</button>
                 </div>
             </div>);
 }

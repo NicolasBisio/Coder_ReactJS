@@ -32,7 +32,7 @@ function NavBar() {
                     </div>
 
                     <div className="contenedor-carrito">
-                        <CartWidget></CartWidget>
+                        <CartWidget/>
                     </div>
                 </div>
             </nav>

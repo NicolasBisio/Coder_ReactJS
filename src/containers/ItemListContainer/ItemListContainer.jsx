@@ -1,22 +1,22 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import ItemList from "../ItemList/ItemList";
-/* import "./ItemDetailContainer.css" */
-const URL = "https://636e8c97bb9cf402c804b356.mockapi.io/Amigurumis"
+import ItemList from "../../components/ItemList/ItemList";
+import "./ItemListContainer.css";
+const URL = "https://636e8c97bb9cf402c804b356.mockapi.io/Amigurumis";
 
 
-function ItemDetailContainer(props) {
+function ItemListContainer() {
     const [productos, setProductos] = useState(null)
 
-    const { itemId } = useParams()
+    const { categoryId } = useParams()  
 
     useEffect(() => {
         const cargarProductos = async () => {
             try {
                 const respuesta = await fetch(URL)
                 const data = await respuesta.json()
-                const dataFiltrada = data.filter(el => el.detail === itemId)
-                if (itemId) {
+                const dataFiltrada = data.filter(el => el.category === categoryId)
+                if (categoryId) {
                     setProductos(dataFiltrada)
                 }
                 else {
@@ -27,18 +27,18 @@ function ItemDetailContainer(props) {
             }
         }
         cargarProductos()
-    }, [itemId])
+    }, [categoryId])
 
 
     return (
-        <div /* className="container" */>
+        <div className="container">
             {productos ?
                 <ItemList products={productos} />
                 :
-                <h1>Cargando...</h1>
+                <h1>Cargando...</h1> /* Cambiar por un componente loader */
             }
         </div>
     )
 }
 
-export default ItemDetailContainer;
+export default ItemListContainer;

@@ -7,8 +7,6 @@ function ItemDetailContainer() {
 
     const params = useParams()
 
-    console.log(params)
-
     useEffect(() => {
         const cargarProductos = async () => {
             try {

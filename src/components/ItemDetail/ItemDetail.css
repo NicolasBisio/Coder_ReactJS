@@ -48,6 +48,7 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    gap: 0.5rem;
 }
 
 .card:hover {

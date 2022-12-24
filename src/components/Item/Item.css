@@ -87,6 +87,7 @@ body {
     background-color: #ffefef;
     color: #db8585;
     border: 1.5px solid #ffc3c3;
+    padding: 0rem 0.2rem 0rem 0.2rem;
 }
 
 .btn:hover,

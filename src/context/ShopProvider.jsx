@@ -5,15 +5,18 @@ export const Shop = createContext()
 const ShopProvider = ({ children }) => {
     const [cart, setCart] = useState([])
     const [totalCart, setTotalCart] = useState([0])
+    const [cartQty, setCartQty] = useState([0])
+
+    useEffect(() => {
+        setCartQty(cart.reduce((acc, producto) => acc + producto.quantity, 0))
+    }, [cart])
 
     useEffect(() => {
         setTotalCart(cart.reduce((acc, producto) => acc + (producto.precio * producto.quantity), 0))
     }, [cart])
 
     const addItem = (producto, cantidad) => {
-        /* console.log(producto, cantidad); */
         const productoRepetido = isInCart(producto)
-        /* console.log(productoRepetido); */
 
         if (productoRepetido) {
             productoRepetido.quantity += cantidad
@@ -28,18 +31,14 @@ const ShopProvider = ({ children }) => {
     }
 
     const removeItem = (producto) => {
-        console.log(producto)
         const productosFiltrados = cart.filter(elemento => elemento.id !== producto.id)
         setCart(productosFiltrados)
     }
 
     const clearCart = () => setCart([])
 
-    
-
-
     return (
-        <Shop.Provider value={{ addItem, cart, removeItem, clearCart, totalCart }}>
+        <Shop.Provider value={{ addItem, cart, removeItem, clearCart, totalCart, cartQty }}>
             {children}
         </Shop.Provider>
     )

@@ -5,18 +5,16 @@ import { Shop } from '../../context/ShopProvider'
 
 
 function CartWidget () {
-    const {cart} = useContext(Shop)
+    const {cart, cartQty} = useContext(Shop)
 
     const navigate = useNavigate()
 
-    const goToCart = () => {
-        navigate("/cart")
-    }
+    const goToCart = () => navigate("/cart")
 
     return (
         <div>
         <img src={carritoImg} onClick={goToCart} className="carritoImg" alt="carrito"></img>
-        {cart.length && <span className="contenedor__numero--carrito">{cart.length}</span>} 
+        {cart.length ? <span className="contenedor__numero--carrito">{cartQty}</span> : <span></span>}
         </div>
     )
 }

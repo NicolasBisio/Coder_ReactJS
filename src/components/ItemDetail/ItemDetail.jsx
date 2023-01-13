@@ -21,8 +21,6 @@ function ItemDetail({ products }) {
         navigate("/cart")
     }
 
-    console.log(qtyAdded)
-
     return (
         <div className="card">
             <div className="card__imagen"><img src={products.imagen} alt={products.imagen} className="card__imagen" title={products.nombre} /></div>

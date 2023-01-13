@@ -1,0 +1,21 @@
+.emptyCart__error {
+    padding-top: 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.emptyCart__error--img {
+    height: 25vh;
+}
+
+.emptyCart__error--titulo {
+    padding-top: 3rem;
+    font-size: 2rem;
+}
+
+.emptyCart__error--subtitulo {
+    font-size: 1.9rem;
+    padding: 1rem 0 3rem 0;
+}

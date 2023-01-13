@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "../../components/ItemDetail/ItemDetail";
+import LoadingComponent from "../../components/LoadingComponent/LoadingComponent";
+
+
 
 function ItemDetailContainer() {
     const [productDetail, setProductDetail] = useState({})
@@ -26,8 +29,8 @@ function ItemDetailContainer() {
             {productDetail ?
                 <ItemDetail products={productDetail} />
                 :
-                <h1>Cargando...</h1> /* Cambiar por un componente loader */
-            }
+                <LoadingComponent/> 
+                }
         </div>
     )
 }

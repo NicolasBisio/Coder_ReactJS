@@ -31,7 +31,7 @@ function ItemListContainer() {
 
 
     return (
-        <div className="container">
+        <div className="container body">
             {productos ?
                 <ItemList products={productos} />
                 :

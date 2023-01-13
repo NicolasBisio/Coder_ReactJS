@@ -1,6 +1,9 @@
 .App {
   text-align: center;
-}
+  font-family: 'PT Sans', serif;
+  color: #5f3700;
+  background-color: #ffffff;
+  }
 
 .App-logo {
   height: 40vmin;

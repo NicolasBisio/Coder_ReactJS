@@ -1,6 +1,8 @@
 import React, { useContext } from 'react'
+import { useNavigate } from 'react-router-dom';
 import { Shop } from '../../context/ShopProvider'
 import tacho from "../../img/tacho.png";
+import guardarOrden from '../../utilities/guardarOrden';
 import ordenGenerada from '../../utilities/ordenGenerada';
 import EmptyCart from "../EmptyCart/EmptyCart";
 import "./Cart.css"
@@ -10,9 +12,13 @@ const Cart = () => {
 
   const deleteAllHandler = () => clearCart()
 
+  const navigate = useNavigate();
+
   const confirmarOrden = () => {
-    const orden = ordenGenerada()
+    const orden = ordenGenerada("nico", "341", cart, totalCart)
     guardarOrden(cart, orden)
+    clearCart();
+    navigate("/")
   }
 
   return (
@@ -87,7 +93,7 @@ const Cart = () => {
           </table>
 
           <section>
-            <button onClick={confirmarOrden}>Confirmar compra</button>
+            <button className="btn btn-detail" onClick={confirmarOrden}>Confirmar compra</button>
           </section>
         </>
       }

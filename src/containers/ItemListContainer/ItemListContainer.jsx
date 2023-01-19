@@ -5,7 +5,6 @@ import ItemList from "../../components/ItemList/ItemList";
 import LoadingComponent from "../../components/LoadingComponent/LoadingComponent";
 import "./ItemListContainer.css";
 import { db } from "../../firebase/config";
-import cargarMasivo from "../../utilities/cargarMasivo";
 
 
 function ItemListContainer() {
@@ -18,13 +17,11 @@ function ItemListContainer() {
     useEffect(() => {
         const cargarProductos = async () => {
             try {
-                /* cargarMasivo()     */            
+                /* cargarMasivo()     */
                 const q = query(collection(db, "products"));
                 const querySnapshot = await getDocs(q);
                 const productos = []
                 querySnapshot.forEach((doc) => {
-                    // doc.data() is never undefined for query doc snapshots
-                    console.log(doc.id, " => ", doc.data());
                     productos.push({ id: doc.id, ...doc.data() })
                 });
 

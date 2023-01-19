@@ -16,7 +16,7 @@ function ItemCount({ onAdd, stock }) {
     }
 
     const onIncrementHandler = () => {
-        if (contador <= stock) {
+        if (contador < stock) {
             setContador(contador + 1)
         }
     }

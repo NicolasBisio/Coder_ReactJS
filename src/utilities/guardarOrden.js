@@ -1,5 +1,6 @@
 import { addDoc, collection, doc, getDoc, writeBatch } from "firebase/firestore"
 import { db } from "../firebase/config"
+import swal from "sweetalert";
 
 const guardarOrden = (cart, orden) => {
     console.log("Guardar orden");
@@ -27,18 +28,14 @@ const guardarOrden = (cart, orden) => {
                 if (outOfStock.length === 0) {
                     addDoc(collection(db, "orders"), orden).then(({ id }) => {
                         batch.commit().then(() => {
-                            alert("Se generó la order con Id: " + id)
+                            swal("¡Muchas gracias por su compra!", "Se generó la order con Id: " + id, "success");
                         })
                     }).catch((err) => {
                         console.log(`Error: ${err.message}`)
                     })
 
                 } else {
-                    let mensaje = ""
-                    for (const producto of outOfStock) {
-                        mensaje += `${producto.title}`
-                    }
-                    alert(`Productos fuera de stock: ${mensaje}`)
+                    swal("Producto fuera de stock", "", "error")
                 }
 
             })

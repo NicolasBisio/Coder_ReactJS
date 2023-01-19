@@ -7,3 +7,5 @@ Aplicación destinada a simular la tienda virtual de Anmai Crochet, un emprendim
 Firebase: Firestore, en particular. Base de datos NoSQL, fundamental para la consulta de los productos y la generación de las órdenes de compra.
 
 Bootstrap: librería utilizada para unificar y refinar los estilos de la aplicación.
+
+Sweet Alert: utilizada para dar estilo a los mensajes enviados al usuario.

@@ -77,6 +77,9 @@ body {
     width: 1fr;
 }
 
+.card-detail{
+    padding-bottom: 1rem;
+}
 .card .card-button {
     padding-top: 1rem;
     text-align: center;

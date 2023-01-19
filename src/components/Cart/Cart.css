@@ -4,9 +4,17 @@ table {
     width: 100%;
 }
 
-.checkout__titulo{
+.error_validacion {
+    font-weight: 700;
+    color: red;
+}
+
+.checkout__titulo,
+.contenedor__error {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    gap: 2rem;
 }
 
 .checkout__columna--nombre {

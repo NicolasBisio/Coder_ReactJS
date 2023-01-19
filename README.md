@@ -1,6 +1,6 @@
 # ECOMMERCE Anmai Crochet
 
-Aplicación destinada a simular una tienda virtual de Anmai Crochet, emprendimiento de dos amigas que buscan compartir su talento y pasión por esta técnica milenaria.
+Aplicación destinada a simular la tienda virtual de Anmai Crochet, un emprendimiento de dos amigas que buscan compartir su talento y pasión por esta técnica milenaria.
 
 ## Dependencias utilizadas
 
